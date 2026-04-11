@@ -1,2 +1,6 @@
-# markov-chain-simulation
-Simulation and analysis of Markov chains using Python
+# Markov Chain Simulation
+
+This project simulates a Markov chain and studies how probabilities evolve over time.
+
+## Results
+
