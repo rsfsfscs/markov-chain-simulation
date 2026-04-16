@@ -177,6 +177,10 @@ $$
 
 Therefore if we simlate using P enough times, we should get a result close to the theory
 
+We test it with total capital N = 5, initial state 2 and probability of winning the round p = 2/3
+
+by taking 20 step for TPM method, we get result below which are very close
+
 ```python
 By TPM theory = 0.7997594170721426
 simulate by TPM = 0.8002
