@@ -129,7 +129,7 @@ P =
 \end{pmatrix}
 $$
 
-![Convergent](images/convergent.png)
+![Convergent](image/convergent.png)
 
 Non-Convergent Example
 
@@ -141,7 +141,7 @@ P =
 \end{pmatrix}
 $$
 
-![Non-convergent](images/non-convergent.png)
+![Non-convergent](image/non-convergent.png)
 
 ### Application: Gambler’s Ruin
 This project also explores the Gambler’s Ruin problem, an example of an absorbing Markov chain.
