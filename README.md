@@ -25,9 +25,9 @@ Let \( P \) be a transition probability matrix (TPM).
 
 The probability of moving from state \( i \) to state \( j \) in \( n \) steps is:
 
-\[
+$$
 P^n_{ij}
-\]
+$$
 
 This is computed using matrix powers:
 ```python
@@ -36,27 +36,19 @@ np.linalg.matrix_power(P, n)
 
 ### Initial Distribution
 
-If the initial state follows a distribution 
-𝑝
-p, then the distribution after 
-𝑛
-n steps is:
+If the initial state follows a distribution p, then the distribution after n steps is:
 
-𝑝
-𝑃
-𝑛
-pP
-n
+$$
+pP^n
+$$
 
-This represents the probability distribution over all states at time 
-𝑛
-n.
+This represents the probability distribution over all states at time n.
 
 ### Simulation Interpretation
 We simulate a Markov chain by:
 - Choosing an initial state
 - Sampling transitions using the TPM
-- Repeating for 𝑛 n steps
+- Repeating for n steps
 - Estimating probabilities via repeated trials
 
 ---
@@ -65,7 +57,7 @@ We simulate a Markov chain by:
 ```python
 Pnij(TPM, n, i, j)
 ```
-To computes the exact value of $P^n_K,i$
+To computes the exact value of $P^n_{K,i}$
 ```python
 pPnij(p, TPM, n)
 ```
@@ -75,7 +67,7 @@ To computes $p^n_i=(pP^n)_i$​
 ```python
 Pnij_simulation(TPM,n,i,j,trials=10000)
 ```
-Estimates $P^n_K,i$ using Monte Carlo methods
+Estimates $P^n_{K,i}$ using Monte Carlo methods
 ```python
 pPnij_simulation(p,TPM,n,trials=10000)
 ```
@@ -137,7 +129,7 @@ P =
 \end{pmatrix}
 $$
 
-![Comparison Plot](images/comparison.png)
+![Convergent](images/convergent.png)
 
 Non-Convergent Example
 
@@ -149,7 +141,7 @@ P =
 \end{pmatrix}
 $$
 
-![Comparison Plot](images/comparison.png)
+![Non-convergent](images/non-convergent.png)
 
 ### Application: Gambler’s Ruin
 This project also explores the Gambler’s Ruin problem, an example of an absorbing Markov chain.
@@ -184,3 +176,10 @@ $$ P_k=\frac{1-(\frac{q}p)^K}{1-(\frac{q}p)^N}
 $$
 
 Therefore if we simlate using P enough times, we should get a result close to the theory
+
+```python
+By TPM theory = 0.7997594170721426
+simulate by TPM = 0.8002
+By theory = 0.7741935483870966
+simulate = 0.7797
+```
